@@ -40,7 +40,7 @@ export default function Home() {
         <div className={styles.logo}>ZenTask</div>
         <div className={styles.navLinks}>
           <Link href="/features" className={styles.navLink}>Features</Link>
-          <Link href="#" className={styles.navLink}>Log In</Link>
+          <Link href="https://github.com/Natanim-Kemal/zentask-site" className={styles.navLink}>GitHub</Link>
         </div>
       </nav>
 
