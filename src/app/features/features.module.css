@@ -1,0 +1,139 @@
+.main {
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 1rem;
+    z-index: 10;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLink {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.navLink:hover {
+    opacity: 1;
+}
+
+.header {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 1rem;
+}
+
+.title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-serif);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1.5rem 6rem 1.5rem;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* changed from space-between to allow text to flow naturally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    gap: 1rem;
+    /* Added gap since icon is gone */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Bento Grid Spans */
+.span4 {
+    grid-column: span 4;
+}
+
+.span6 {
+    grid-column: span 6;
+}
+
+.span8 {
+    grid-column: span 8;
+}
+
+.span12 {
+    grid-column: span 12;
+}
+
+@media (max-width: 900px) {
+
+    .span4,
+    .span6,
+    .span8 {
+        grid-column: span 12;
+    }
+}
+
+.cardTitle {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.cardDesc {
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+.highlight {
+    background-color: #000;
+    color: #fff;
+}
+
+.highlight .cardDesc {
+    opacity: 0.8;
+    color: #ddd;
+}
